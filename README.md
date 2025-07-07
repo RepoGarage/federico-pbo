@@ -1,61 +1,63 @@
 # UwUrg
 
-A port of [turg](https://github.com/commrade-goad/turg) from C to C++ for an `OOP Class` project.
+Port dari [turg](https://github.com/commrade-goad/turg) dari C ke C++ untuk proyek `OOP Class`.
 
-[Link Repositories](https://github.com/commrade-goad/uwurg)
+[Link Repositori](https://github.com/commrade-goad/uwurg)
 
-## Library used
+## Library yang Digunakan
 
 - [raylib](https://github.com/raysan5/raylib)
 
-## Build
+## Cara Build
 
 ### Windows
 
-You can download the release by going to the `tags` section.  
-Currently, the app is not in its final version, but you can try it from the `pre-release`.  
-Download the file named `rc1-x86_64-win32.zip`, extract it to your preferred folder,  
-then open the `UwUrg's Release` folder and run `uwurg.exe`.
+Anda dapat mengunduh rilisan aplikasi pada bagian `tags`.  
+Saat ini aplikasi belum dalam versi final, namun Anda dapat mencoba versi `pre-release`.  
+Unduh file bernama `rc1-x86_64-win32.zip`, ekstrak ke folder pilihan Anda,  
+kemudian buka folder `UwUrg's Release` dan jalankan `uwurg.exe`.
 
 ### Arch Linux
 
-Install dependencies:
+Install dependensi:
+
 ```sh
 sudo pacman -S base-devel clang glu cmake libx11 git libglvnd gcc-libs libxcb libxau libxdmcp libxcursor libxinerama libxrandr
 ```
 
 ### Ubuntu / Linux Mint
 
-#### Install from Release
+#### Install dari Release
 
-You can download the release by going to the `tags` section.  
-Currently, the app is not in its final version, but you can try it from the `pre-release`.  
-Download the file named `rc1-x86_64-linux.zip`, extract it to your preferred folder,  
-then open the `UwUrg's Release` folder and run `uwurg`.
+Anda dapat mengunduh rilisan aplikasi pada bagian `tags`.  
+Saat ini aplikasi belum dalam versi final, namun Anda dapat mencoba versi `pre-release`.  
+Unduh file bernama `rc1-x86_64-linux.zip`, ekstrak ke folder pilihan Anda,  
+lalu buka folder `UwUrg's Release` dan jalankan `uwurg`.
 
-#### Build from Source
+#### Build dari Source
 
-Install dependencies:
+Install dependensi:
+
 ```bash
 sudo apt install -y cmake libgl1-mesa-dev libglu1-mesa-dev libx11-dev libxcb1-dev libxau-dev libxdmcp-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libasound2-dev git build-essential clang
 ```
 
-> **Note:**  
-> It is recommended to install `cmake` via **Snap** to get the latest version (the version from apt is usually outdated):
+> **Catatan:**  
+> Disarankan untuk menginstal `cmake` melalui **Snap** agar mendapatkan versi terbaru (versi dari apt biasanya sudah usang):
+
 ```bash
 sudo snap install cmake --classic
 ```
 
-### Shared
+### Build (Berlaku untuk Semua Sistem)
 
 ```sh
 git clone https://github.com/commrade-goad/uwurg
 cd uwurg
 mkdir build
 cd build
-cmake -DCMAKE_BUILD_TYPE=Release .. # or use `Debug` for debug build
+cmake -DCMAKE_BUILD_TYPE=Release .. # atau gunakan `Debug` untuk build debug
 make -j$(nproc)
 cd ..
 ./build/uwurg
 ```
-
