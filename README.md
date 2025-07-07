@@ -1,54 +1,61 @@
-# uwurg
+# UwUrg
 
-**uwurg** adalah proyek kelas berbasis OOP (Object Oriented Programming) yang dikembangkan menggunakan bahasa C++.
-
-## Deskripsi
-
-Repo ini berisi kode program untuk tugas/proyek kelas OOP. Di dalamnya terdapat berbagai implementasi konsep OOP seperti class, inheritance, polymorphism, encapsulation, dan lainnya, sesuai dengan materi yang dipelajari di perkuliahan.
+A port of [turg](https://github.com/commrade-goad/turg) from C to C++ for an `OOP Class` project.
 
 [Link Repositories](https://github.com/commrade-goad/uwurg)
 
-## Fitur
+## Library used
 
-- Implementasi class dan objek
-- Pewarisan (Inheritance)
-- Polimorfisme (Polymorphism)
-- Enkapsulasi (Encapsulation)
-- Modularisasi kode
-- Contoh penggunaan C++ modern
+- [raylib](https://github.com/raysan5/raylib)
 
-## Struktur Folder
+## Build
 
-- `src/` — Kode sumber utama program
-- `include/` — Header files (jika tersedia)
-- `CMakeLists.txt` — File konfigurasi build dengan CMake
-- File lain sesuai kebutuhan tugas/project
+### Windows
 
-## Cara Build
+You can download the release by going to the `tags` section.  
+Currently, the app is not in its final version, but you can try it from the `pre-release`.  
+Download the file named `rc1-x86_64-win32.zip`, extract it to your preferred folder,  
+then open the `UwUrg's Release` folder and run `uwurg.exe`.
 
-1. Pastikan sudah terinstall compiler C++ (misal: g++ atau clang++) dan CMake.
-2. Clone repo ini:
-   ```bash
-   git clone https://github.com/commrade-goad/uwurg.git
-   cd uwurg
-   ```
-3. Build dengan CMake:
-   ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make
-   ```
-4. Jalankan program sesuai file output yang dihasilkan.
+### Arch Linux
 
-## Kontribusi
+Install dependencies:
+```sh
+sudo pacman -S base-devel clang glu cmake libx11 git libglvnd gcc-libs libxcb libxau libxdmcp libxcursor libxinerama libxrandr
+```
 
-Silakan fork dan pull request jika ingin memperbaiki bug, menambah fitur, atau sekadar belajar bersama.
+### Ubuntu / Linux Mint
 
-## Lisensi
+#### Install from Release
 
-Repo ini dibuat untuk keperluan pembelajaran dan tugas kuliah. Lisensi mengikuti aturan institusi atau dapat dilihat pada LICENSE (jika tersedia).
+You can download the release by going to the `tags` section.  
+Currently, the app is not in its final version, but you can try it from the `pre-release`.  
+Download the file named `rc1-x86_64-linux.zip`, extract it to your preferred folder,  
+then open the `UwUrg's Release` folder and run `uwurg`.
 
----
+#### Build from Source
 
-Selamat belajar OOP dengan C++! 🚀
+Install dependencies:
+```bash
+sudo apt install -y cmake libgl1-mesa-dev libglu1-mesa-dev libx11-dev libxcb1-dev libxau-dev libxdmcp-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libasound2-dev git build-essential clang
+```
+
+> **Note:**  
+> It is recommended to install `cmake` via **Snap** to get the latest version (the version from apt is usually outdated):
+```bash
+sudo snap install cmake --classic
+```
+
+### Shared
+
+```sh
+git clone https://github.com/commrade-goad/uwurg
+cd uwurg
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release .. # or use `Debug` for debug build
+make -j$(nproc)
+cd ..
+./build/uwurg
+```
+
